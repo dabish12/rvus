@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0a2150">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E">
+<title>Dembi Dollo Rift Valley University – Online Exam</title>
+<!-- Design: style.css | Logic: script.js | PDF reader library (needs internet) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- The app is drawn inside this container by script.js. The login page below is shown first. -->
+<div id="app">
+  <div class="split">
+
+    <!-- Left: university branding -->
+    <div class="hero">
+      <div class="hc">
+        <svg viewBox="0 0 64 64"><path d="M32 3 8 12v18c0 15 10 26 24 31 14-5 24-16 24-31V12z" fill="#d4a82a"/><path d="M32 8 12 15v15c0 12 8 22 20 27 12-5 20-15 20-27V15z" fill="#0a2150"/><path d="M32 22c-5-3-11-3-15-1v16c4-2 10-2 15 1 5-3 11-3 15-1V21c-4-2-10-2-15 1z" fill="#fff"/><path d="M32 22v16" stroke="#d4a82a" stroke-width="2"/></svg>
+        <h1>Dembi Dollo Rift Valley University</h1>
+        <p>Online Mid Exam Portal</p>
+        <span class="tag">Computer and Mobile Application</span>
+      </div>
+    </div>
+
+    <!-- Right: sign-in form -->
+    <div class="fm">
+      <div class="fb">
+        <h2>Welcome back</h2>
+        <p class="mu">Sign in to continue to your exam portal.</p>
+        <label>Username</label>
+        <input id="u" autocomplete="username" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Enter username">
+        <label>Password</label>
+        <input id="p" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" placeholder="Enter password">
+        <p class="no"></p>
+        <button class="wide" onclick="login()">Sign in</button>
+        <p class="mu" style="margin-top:14px">Students: use the account given by your exam administrator.</p>
+        <p class="mu"><a href="#" onclick="setCloud();return false">⚙ Server connection</a></p>
+        <noscript><p class="no">JavaScript must be enabled to use this system.</p></noscript>
+        <footer>Prepared by <b>Daba Atm</b></footer>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+<!-- Safety check: shows a red message if a file is missing -->
+<script>
+window.addEventListener('load',function(){
+  var msg='';
+  if(typeof loginView==='undefined') msg='script.js was not found or has an error.';
+  else if(getComputedStyle(document.body).backgroundColor==='rgba(0, 0, 0, 0)') msg='style.css was not found.';
+  if(msg){var d=document.createElement('div');
+    d.style.cssText='position:fixed;top:0;left:0;right:0;background:#b3261e;color:#fff;padding:12px;text-align:center;z-index:99;font:15px sans-serif';
+    d.textContent=msg+' Keep index.html, style.css and script.js together in the same folder.';
+    document.body.appendChild(d);}
+});
+</script>
+</body>
+</html>
